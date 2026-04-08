@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { ShoppingCart, Settings, LayoutDashboard, ChevronLeft, ChevronRight, Package, BarChart3 } from 'lucide-react';
+import { ShoppingCart, Settings, LayoutDashboard, ChevronLeft, ChevronRight, Package, BarChart3, Warehouse, Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuthStore } from '@/stores/authStore';
 
@@ -8,6 +8,8 @@ const NAV = [
     { to: "/", label: "Dashboard", icon: LayoutDashboard },
     { to: "/billing", label: "Billing", icon: ShoppingCart },
     { to: "/products", label: "Products", icon: Package },
+    { to: "/inventory", label: "Inventory", icon: Warehouse },
+    { to: "/customers", label: "Customers", icon: Users },
     { to: "/reports", label: "Reports", icon: BarChart3 },
     { to: "/settings", label: "Settings", icon: Settings },
 ];

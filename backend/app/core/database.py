@@ -16,6 +16,7 @@ async def init_db():
     await db.products.create_index("barcode")
     await db.bills.create_index("bill_number", unique=True)
     await db.customers.create_index("phone", unique=True, sparse=True)
+    await db.categories.create_index("slug", unique=True)
     if not await db.settings.find_one({"key": "store_name"}):
         await db.settings.insert_many([
             {"key": "store_name", "value": "QuickBill Store"},

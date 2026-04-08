@@ -6,6 +6,8 @@ import Login from '@/pages/Login';
 import Dashboard from '@/pages/Dashboard';
 import Billing from '@/pages/Billing';
 import Products from '@/pages/Products';
+import Inventory from '@/pages/Inventory';
+import Customers from '@/pages/Customers';
 import Reports from '@/pages/Reports';
 import Settings from '@/pages/Settings';
 
@@ -19,10 +21,12 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Dashboard />} />
-          <Route path="billing" element={<Billing />} />
-          <Route path="products" element={<Products />} />
-          <Route path="reports" element={<Reports />} />
-          <Route path="settings" element={<Settings />} />
+        <Route path="billing" element={<Billing />} />
+        <Route path="products" element={<Products />} />
+        <Route path="inventory" element={<Inventory />} />
+        <Route path="customers" element={<Customers />} />
+        <Route path="reports" element={<Reports />} />
+        <Route path="settings" element={<Settings />} />
       </Route>
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
